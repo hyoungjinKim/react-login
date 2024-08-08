@@ -66,7 +66,6 @@ app.post("/api/user/login", async (req, res) => {
 
     // 토큰 생성
     const token = await user.generateToken();
-    console.log("토큰 생성 확인");
 
     // 쿠키에 토큰 저장 및 응답
     res.cookie("x_auth", token).status(200).json({
