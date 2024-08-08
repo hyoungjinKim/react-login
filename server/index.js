@@ -63,7 +63,7 @@ app.post("/api/user/login", async (req, res) => {
         message: "비밀번호 비교 중 에러가 발생했습니다.",
       });
     }
-    console.log("비밀번호 확인");
+
     // 토큰 생성
     const token = await user.generateToken();
     console.log("토큰 생성 확인");
