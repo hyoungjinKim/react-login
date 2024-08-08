@@ -75,7 +75,6 @@ app.post("/api/user/login", async (req, res) => {
     });
     console.log("토큰 쿠키로 전송 완료");
   } catch (error) {
-    console.error("Error while login:", error);
     res
       .status(500)
       .json({ loginSuccess: false, message: "로그인 중 오류가 발생했습니다." });
